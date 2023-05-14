@@ -2,6 +2,7 @@
 from art import logo, vs
 from game_data import data
 import random
+import os
 
 print(logo)
 
@@ -61,6 +62,8 @@ while right_answer:
     else:
         # If answer is right, print: You're right! current score:. make person with less followers = input and generate new comparison. 
         score += 1
+        os.system('clear')
         print(f"You're right! Current score: {score}\n\n")
-        account_a = lower_count_acct
+        account_a = account_b
         account_b = random_account()
+        
