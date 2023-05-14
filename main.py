@@ -25,6 +25,9 @@ def less_followers(accout_a, account_b):
 account_a = random_account()
 account_b = random_account()
 
+# Keep track of score
+score = 0
+
 # Make sure we aren't comparing an account to itself
 while account_a == account_b:
     account_b = random_account()
@@ -45,11 +48,16 @@ elif answer == 'B':
 
 lower_count = less_followers(account_a, account_b)
 if lower_count == answer:
+    if score == 0:
+        score = 0
+    else:
+        score -= 1
     #If answer is wrong, end game. Display score and msg.
-    print("You lose! Final score: {}")
+    print(f"You lose! Final score: {score}")
 else:
     # If answer is right, print: You're right! current score:. make person with less followers = input and generate new comparison. 
-    print("You're right! Current score: {}")
+    score += 1
+    print(f"You're right! Current score: {score}")
     account_a = lower_count
     account_b = random_account()
 
