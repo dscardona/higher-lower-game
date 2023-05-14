@@ -43,10 +43,10 @@ if answer == 'A':
 elif answer == 'B':
     answer = account_b
 
-lower_count: less_followers(accout_a, account_b)
+lower_count = less_followers(account_a, account_b)
 if lower_count == answer:
     #If answer is wrong, end game. Display score and msg.
-    print("You loose! Final score: {}")
+    print("You lose! Final score: {}")
 else:
     # If answer is right, print: You're right! current score:. make person with less followers = input and generate new comparison. 
     print("You're right! Current score: {}")
