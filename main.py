@@ -10,7 +10,7 @@ def random_account():
     """Returns random instagram account from 'data' array"""
     return random.choice(data)
 
-#Define function to compare amount of followers of two accounts
+#Define function to return account with lower amt of followers
 def less_followers(account_a, account_b):
     """Accepts two dictionaries (accounts), and outputs account with lower 'follower_count' value"""
     if account_a["follower_count"] > account_b["follower_count"]:
@@ -64,8 +64,3 @@ while right_answer:
         print(f"You're right! Current score: {score}\n\n")
         account_a = lower_count_acct
         account_b = random_account()
-        
-
-
-
-    
