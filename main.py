@@ -11,7 +11,7 @@ def random_account():
     return random.choice(data)
 
 #Define function to compare amount of followers of two accounts
-def least_followers(accout_a, account_b):
+def less_followers(accout_a, account_b):
     """Accepts two dictionaries (accounts), and outputs account with lower 'follower_count' value"""
     if account_a["follower_count"] > account_b["follower_count"]:
         return account_b
@@ -19,7 +19,6 @@ def least_followers(accout_a, account_b):
         return account_a
     else:
         return 0
-
 
 
 # Assign accounts to variables to be compared
@@ -39,9 +38,23 @@ print(f"Against: B. {account_b['name']}, a(n) {account_b['description']}, from {
 
 #Ask: WHo has more followers? input 
 answer = input("Who has more followers? Type 'A' or 'B': " )
+if answer == 'A':
+    answer = account_a
+elif answer == 'B':
+    answer = account_b
 
-#Compare followers of A and B, compare input with right answer. 
-
-
-    # If answer is right, print: You're right! current score:. make B (person with less followers) = input and generate new comparison. 
+lower_count: less_followers(accout_a, account_b)
+if lower_count == answer:
     #If answer is wrong, end game. Display score and msg.
+    print("You loose! Final score: {}")
+else:
+    # If answer is right, print: You're right! current score:. make person with less followers = input and generate new comparison. 
+    print("You're right! Current score: {}")
+    account_a = lower_count
+    account_b = random_account()
+
+
+
+
+
+    
