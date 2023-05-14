@@ -1,9 +1,9 @@
 #print logo
-from art import logo
-print(logo)
-#Generate comparison: Compare: A {X}, occupation, nationality)
+from art import logo, vs
 from game_data import data
 import random
+
+print(logo)
 
 # Function returns random account
 def random_account():
@@ -18,12 +18,16 @@ account_b = random_account()
 while account_a == account_b:
     account_b = random_account()
 
-print(account_a)
-print(account_b)
-
+#Generate comparison then print: Compare: A {X}, occupation, nationality)
+print(f"Comprare: A. {account_a['name']}, a(n) {account_a['description']}, from {account_a['country']}")
 #print vs
+print(vs)
 #Against B: {Y}, occupation, nationality
+print(f"Against: B. {account_b['name']}, a(n) {account_b['description']}, from {account_b['country']}")
+
 #Ask: WHo has more followers? input 
+answer = input("Who has more followers? Type 'A' or 'B': " )
+
 #Compare followers of A and B, compare input with right answer. 
 # 
     # If answer is right, print: You're right! current score:. make B (person with less followers) = input and generate new comparison. 
