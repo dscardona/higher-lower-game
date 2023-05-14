@@ -25,18 +25,18 @@ right_answer = True
 # Keep track of score
 score = 0
 
+# Assign accounts to variables to be compared
+account_a = random_account()
+account_b = random_account()
+
 #Keeps game going until right_answer = False
 while right_answer:
-
-    # Assign accounts to variables to be compared
-    account_a = random_account()
-    account_b = random_account()
 
     # Make sure we aren't comparing an account to itself
     while account_a == account_b:
         account_b = random_account()
 
-    #Compare: A {X}, occupation, nationality)
+    #Compare: A {X}, occupation, nationality
     print(f"Comprare: A. {account_a['name']}, a(n) {account_a['description']}, from {account_a['country']}")
 
     #print vs
