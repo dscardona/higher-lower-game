@@ -10,6 +10,18 @@ def random_account():
     """Returns random instagram account from 'data' array"""
     return random.choice(data)
 
+#Define function to compare amount of followers of two accounts
+def least_followers(accout_a, account_b):
+    """Accepts two dictionaries (accounts), and outputs account with lower 'follower_count' value"""
+    if account_a["follower_count"] > account_b["follower_count"]:
+        return account_b
+    elif account_a["follower_count"] < account_b["follower_count"]:
+        return account_a
+    else:
+        return 0
+
+
+
 # Assign accounts to variables to be compared
 account_a = random_account()
 account_b = random_account()
@@ -29,6 +41,7 @@ print(f"Against: B. {account_b['name']}, a(n) {account_b['description']}, from {
 answer = input("Who has more followers? Type 'A' or 'B': " )
 
 #Compare followers of A and B, compare input with right answer. 
-# 
+
+
     # If answer is right, print: You're right! current score:. make B (person with less followers) = input and generate new comparison. 
     #If answer is wrong, end game. Display score and msg.
